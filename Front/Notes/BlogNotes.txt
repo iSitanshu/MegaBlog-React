@@ -1,0 +1,14 @@
+Let start creating an application name MegaBlog
+
+1.  More Important step environment variable step - 
+on creating a website there must be an application 
+which can contact the database - as database contains 
+unique client id secret id password - system variable
+
+2. make an environment variable .env and write 
+VITE_APPWRITE_URL = "test environment"
+and make a sample environment variable
+
+3. Access the environment variable - sabme alag
+console.log(import.meta.env.VITE_APPWRITE_URL)
+ans - test environment
