@@ -40,4 +40,5 @@ const conf = {
 export default conf
 
 
-SERVICES - 6555
+SERVICES - Write code such as if wwe have to take out code 
+it should be platform independent 
