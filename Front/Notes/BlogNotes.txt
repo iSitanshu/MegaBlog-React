@@ -1,6 +1,8 @@
 Let start creating an application name MegaBlog
 
-ENVIRONMENT VARIABLE - are the file .env in the root
+$ Part 1
+
+ENVIRONMENT VARIABLE - are the file .env (in the root of the vite@latest)
 of the project - They allow developers to manage 
 sensitive information, like API keys and database 
 credentials, without hardcoding them into the source
@@ -39,6 +41,20 @@ const conf = {
 }
 export default conf
 
+$ Part 2 - Vender Login
 
 SERVICES - Write code such as if wwe have to take out code 
 it should be platform independent 
+ 
+rough - we have to create a client, in client haame endpoint aur project chahiye hoga
+        
+        fir account banta hai par client banne k baad 
+        const account = new Account(client)
+
+        account pe method call create jisme id email password dena hoga 
+        haame koi bhi encryption ka dhyan nhi rakhna hai aapwrite will took cake of it
+
+$Part 3 - AppWrite Blog Data
+Part 2 mein Authentication mein kaam hoga aur Part 3 mein Blog mein kaam hoga
+Adding and Uploading Images, Text, Data to database
+
