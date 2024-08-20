@@ -58,3 +58,5 @@ $Part 3 - AppWrite Blog Data
 Part 2 mein Authentication mein kaam hoga aur Part 3 mein Blog mein kaam hoga
 Adding and Uploading Images, Text, Data to database
 
+$Part 4 - Redux 
+$Part 5 - Components
