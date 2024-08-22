@@ -1,7 +1,7 @@
 import React from 'react'
 import { Editor } from '@tinymce/tinymce-react'
-import { Controler } from 'react-hook-form'
-
+import { Controller } from 'react-hook-form'
+Controller
 export default function RTE({
     name,
     control,
@@ -16,7 +16,7 @@ export default function RTE({
                 >
                     {label}
                 </label>}
-            <Controler
+            <Controller
                 name={name || "content"}
                 control={control}
                 render={({ field: { onChange } }) => (
