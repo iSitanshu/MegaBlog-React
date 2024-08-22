@@ -7,15 +7,17 @@ import { useSelector } from 'react-redux'
 
 
 function PostForm({post}) {
+    console.log('what is this post props passing in the PostForm - ',post,'1');
+    
     const navigate = useNavigate()
-    const {register, handleSubmit, watch, setValue, control, getValues} = useForm({
+    const { register, handleSubmit, watch, setValue, control, getValues } = useForm({
         defaultValues: {
-            title: post?.title||'',
-            slug: post?.slug||'',
-            content: post?.content||'',
-            status: post?.status||'active'
-        }
-    })
+            title: post?.title || "",
+            slug: post?.$id || "",
+            content: post?.content || "",
+            status: post?.status || "active",
+        },
+    });
 
     const userData = useSelector(state => state.counter.userData)
     const submit = async(data) => {

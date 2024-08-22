@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { Button, Input, Logo } from './index'
 import authService from '../appwrite/auth'
-import { Link, Navigate, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 // import { login } from '../store/authSlice'
 
@@ -10,10 +10,11 @@ import { useForm } from 'react-hook-form'
 function Signup() {
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    const { register, handleSubmit } = useForm()
+    const { register, handleSubmit } = useForm() //useForm k functions
     const [error, setError] = useState('')
 
     const create = async (data) => {
+        console.log('what is data in Signup - ',data); //all detail of the form including name email and password - {name: 'one', email: 'one@gmail.com', password: '12345678'}
         setError('')
         try {
             const userData = await authService.createAccount(data)
@@ -44,7 +45,7 @@ function Signup() {
                         to="/login"
                         className="font-medium text-primary transition-all duration-200 hover:underline"
                     >
-                        Sign In
+                        Login In
                     </Link>
                 </p>
                 {error && <p className="text-red-600 mt-8 text-center">{error}</p>}

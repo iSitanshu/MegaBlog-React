@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import {Button, Input, Logo} from './index'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import authService from '../appwrite/auth'
 import {useForm} from 'react-hook-form'
+import { login as authLogin } from '../store/authSlice'
 
 function Login() {
     const navigate = useNavigate()
@@ -14,6 +15,8 @@ function Login() {
 
     const login = async(data) => {
         setError('')
+        console.log('data in login - ',data);
+        
         try {
             const session = await authService.login(data)
             if (session) {
@@ -36,7 +39,7 @@ function Login() {
                             <Logo width="100%" />
                         </span>
             </div>
-            <h2 className="text-center text-2xl font-bold leading-tight">Sign in to your account</h2>
+            <h2 className="text-center text-2xl font-bold leading-tight">Login in to your account</h2>
             <p className="mt-2 text-center text-base text-black/60">
                         Don&apos;t have any account?&nbsp;
                         <Link

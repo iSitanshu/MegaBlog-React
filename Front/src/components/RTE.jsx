@@ -1,7 +1,7 @@
 import React from 'react'
 import { Editor } from '@tinymce/tinymce-react'
 import { Controller } from 'react-hook-form'
-Controller
+
 export default function RTE({
     name,
     control,
@@ -21,10 +21,10 @@ export default function RTE({
                 control={control}
                 render={({ field: { onChange } }) => (
                     <Editor
-                        initialValue='default value'
+                        initialValue={defaultValue}
                         init={
                             {
-                                branding: false,
+                                initialValue: defaultValue,
                                 height: 500,
                                 menubar: true,
                                 plugins: [
@@ -54,30 +54,9 @@ export default function RTE({
                                 content_style: "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }"
                             }}
                         onEditorChange={onChange}
-                    >
-                    </Editor>
+                    />
                 )}
             />
         </div>
     )
 }
-
-
-{/* <Editor
-init={
-    {
-        branding: false,
-        height: 500,
-        menubar: true,
-        plugins: [
-            'advlist autolink lists link charmap print preview anchor',
-            'searchreplace visualblocks code fullscreen',
-            'insertdatetime media table paste code help wordcount'
-        ],
-        toolbar:
-            'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | \ bullshit numlist outdent indent | removeformat | help '
-    }
-}
-initialValue='default value'
->
-</Editor> */}
