@@ -5,7 +5,6 @@ export class Service{
     client = new Client();
     databases;
     bucket;
-    
     constructor(){
         this.client
         .setEndpoint(conf.appwriteUrl)
